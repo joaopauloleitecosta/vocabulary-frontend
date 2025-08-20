@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# 📘 English Vocabulary Frontend (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é o **frontend em React** para consumir a API de vocabulário criada em Spring Boot.  
+O objetivo é fornecer uma interface simples para **cadastrar, listar, atualizar e deletar** palavras ou frases em inglês com suas traduções, exemplos e links de referência.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tecnologias Usadas
+- [React](https://react.dev/)
+- [Axios](https://axios-http.com/)
+- HTML5, CSS3, JavaScript (ES6)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📂 Estrutura do Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+vocabulary-frontend/
+│── src/
+│   │── components/
+│   │   ├── VocabularyList.jsx   # Lista de palavras/frases
+│   │   ├── VocabularyForm.jsx   # Formulário de cadastro
+│   │── App.jsx                  # Componente principal
+│   │── api.js                   # Integração com a API
+│── package.json
+│── README.md
+```
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚙️ Instalação
 
-### `npm run build`
+Clone o repositório e instale as dependências:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/joaopauloleitecosta/vocabulary-frontend.git
+cd vocabulary-frontend
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ▶️ Executando o Projeto
 
-### `npm run eject`
+Para rodar o frontend em modo de desenvolvimento:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+O app ficará disponível em:  
+👉 [http://localhost:3000](http://localhost:3000)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+⚠️ Certifique-se de que sua **API Spring Boot** esteja rodando em [http://localhost:8080](http://localhost:8080).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🔗 Integração com a API
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+O arquivo `src/api.js` contém os endpoints configurados:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```javascript
+const API_URL = "http://localhost:8080/api/vocabulary";
+```
 
-### Code Splitting
+Endpoints utilizados:
+- **GET** `/api/vocabulary` → Lista todas as palavras/frases.
+- **POST** `/api/vocabulary` → Adiciona um novo registro.
+- **PUT** `/api/vocabulary/{id}` → Atualiza um registro.
+- **DELETE** `/api/vocabulary/{id}` → Remove um registro.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📝 Funcionalidades
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- 📌 Listar todas as palavras/frases cadastradas.  
+- ➕ Adicionar novos registros.  
+- 🗑️ Deletar registros existentes.  
+- 🔗 Exibir link de referência (se existir).  
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📷 Demonstração (Exemplo de Tela)
 
-### Advanced Configuration
+```text
+📘 English Vocabulary
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+[Formulário de cadastro]
 
-### Deployment
+Lista de Palavras:
+- hello → olá
+  Exemplo: Hello, good morning!
+  Link: (se existir)
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📜 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto é apenas para fins de estudo e aprendizado.  
+Sinta-se livre para modificar e expandir! 🚀
