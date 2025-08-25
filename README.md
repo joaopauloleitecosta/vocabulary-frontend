@@ -82,16 +82,9 @@ Endpoints utilizados:
 
 ## 📷 Demonstração (Exemplo de Tela)
 
-```text
-📘 English Vocabulary
-
-[Formulário de cadastro]
-
-Lista de Palavras:
-- hello → olá
-  Exemplo: Hello, good morning!
-  Link: (se existir)
-```
+<p align="center">
+  <img src="https://github.com/joaopauloleitecosta/vocabulary-frontend/blob/main/frontend.png" width="300" alt="Tela inicial">
+</p>
 
 ---
 
